@@ -79,6 +79,7 @@ int turnOnNthBit(int bitFlags, int n) {
 	return res;
 }
 
+
 //
 // Return
 //  2 power n.
@@ -126,7 +127,7 @@ int reverseOfNumberByByte(int n) {
     
     int reverse = (byte0 << 24) | (byte1 << 16) | (byte2 << 8) | byte3;
     
-    return reverse;
+     return reverse;
 }
 
 static void three_things_i_learnt() {

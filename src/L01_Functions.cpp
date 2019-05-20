@@ -136,8 +136,8 @@ void tenTimesMysteryVectorN(int vector[], int size) {
 
 static void three_things_i_learnt() {
     /*
-     -
-     -
-     -
+     - I have learned how a number converted to string.
+     - Once if we return the value it will stops reading the remaining variables in array.
+     - learnt how to the test cases works.
      */
 }

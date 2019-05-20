@@ -14,16 +14,37 @@
  
  */
 
+
 int andOfEachByte(int n) {
-    return -9999;
+	int byte0 = n << 24;
+	byte0 = byte0 >> 24;
+	int byte1 = n << 16;
+	byte1 = byte1 >> 24;
+	int byte2 = n << 8;
+	byte2 = byte2 >> 24;
+	int byte3 = n >> 24;
+	int result = byte3 & byte2 & byte1 & byte0;
+	return result;
 }
 
 //
 // Note1:
 // implement the function using bitwise operators only
 // should not use * and + operators.
-int numberFromBits(int bits[32]) {
-    return -9999;
+int numberFromBits(int bits[32]){
+	int count, sum = 0;
+	int res[32], res1[32];
+	for(count = 0; count < 32; count++) {
+		res[31 - count] =  1 << count;
+	}
+	for (count = 0; count < 32; count++)
+	{
+		res1[count] = res[count] * bits[count];
+	}
+	for (count = 0; count < 32; count++) {
+		sum = sum | res1[count];
+	}
+	return sum;
 }
 
 //
